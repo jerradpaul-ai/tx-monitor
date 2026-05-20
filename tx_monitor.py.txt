@@ -14,7 +14,7 @@ def get_tx_data():
         
         your_balance = 6900000
         your_value_usd = your_balance * price
-        your_value_cad = your_value_usd * 1.39  # approx CAD rate
+        your_value_cad = your_value_usd * 1.38  # approx current CAD rate
         
         print(f"\n=== TX MONITOR - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} ===")
         print(f"Price: ${price:.5f} USD ({change_24h:+.2f}% 24h)")
@@ -31,5 +31,5 @@ def get_tx_data():
         print("Error fetching data:", e)
         return None
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     get_tx_data()
